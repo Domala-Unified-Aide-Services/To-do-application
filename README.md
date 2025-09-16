@@ -19,3 +19,6 @@ git add .
 git commit -m "Initial commit"
 git branch -M main
 git push -u origin main
+
+# how to pull
+git pull origin main(or branch name)
