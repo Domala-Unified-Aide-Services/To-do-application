@@ -8,6 +8,5 @@ Git
 Aws
 
 # Instructions
---please create a branch for each task you are working on, and give proper description for the code you wrote.
-
-
+-->  Please create a branch for each task you are working on. 
+-->  And give proper description or give your own readme file for each of the branch for the code you wrote so that others can understand.
