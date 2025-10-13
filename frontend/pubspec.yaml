@@ -1,0 +1,44 @@
+name: todo_list_app
+description: A simple to-do list application built with Flutter.
+publish_to: 'none' # Prevents accidental publishing to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Specifies the Dart SDK version range
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State management (e.g., provider, bloc, riverpod)
+  provider: ^6.0.5 
+  # HTTP client for API calls
+  http: ^0.13.5
+  # Local storage (e.g., shared_preferences, hive, sqflite)
+  shared_preferences: ^2.2.0 
+  # UI packages (e.g., for icons, date pickers)
+  intl: ^0.18.1 # For internationalization and date formatting
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0 # Code analysis and linting
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An example of adding fonts to your application can be found in the
+  # following section of the Flutter documentation:
+  # https://docs.flutter.dev/release/breaking-changes/material-3#font-support
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
