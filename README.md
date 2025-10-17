@@ -28,3 +28,8 @@ git push -u origin main
 ```
 git pull origin main(or branch name)
 ```
+
+
+
+This applicaton has only "llb" folder provided , since flutter is too heavey so feel free to replace them after you create your own application .if any issues with the code , please feel free to contact krishnatejakarnakanti@gmail.com
+
