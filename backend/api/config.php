@@ -6,23 +6,23 @@ error_reporting(E_ALL);
 
 $host = 'localhost';
 $dbname = 'todo_db';
-$user = 'root';
+$user = 'todo_user';
+$password = 'todo_pass@123';
 
-// Try different common password configurations
-$password_options = ['', 'root', 'password', 'admin'];
 
 $pdo = null;
 $connection_error = '';
 
-foreach ($password_options as $password) {
-    try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        break;
-    } catch(PDOException $e) {
-        $connection_error = $e->getMessage();
-        continue;
-    }
+try {
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $user,
+        $password
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    error_log("DB connection failed: " . $e->getMessage());
+    throw new Exception('Database connection failed.');
 }
 
 if (!$pdo) {
