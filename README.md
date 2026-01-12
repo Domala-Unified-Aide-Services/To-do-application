@@ -1,35 +1,51 @@
-# PROJECT 1 ---> To-do-application
-This is a To-do task application 
-# Tech stack
-Flutter
-Php
-Mysql
-Git
-Aws
+# 📝 Todo Application — AWS Deployment & CI Preparation
 
-# Instructions
+## Overview
 
--->  Please create a branch for each task you are working on. 
--->  And give proper description or give your own readme file for each of the branch for the code you wrote so that others can understand.
+This repository contains a **Todo application** that is currently deployed on **AWS EC2** using a traditional, production-style setup.
 
+The purpose of this project is:
+- To demonstrate **end-to-end deployment ownership**
+- To establish a **clean baseline** before introducing CI/CD
+- To incrementally adopt **GitHub Actions** in a controlled way
 
+At this stage, the application is **manually deployed and verified**.  
+Automated pipelines will be introduced next.
 
-# How to  push from you local repository
-```
-git init
-git remote add origin https://github.com/Domala-Unified-Aide-Services/To-do-application.git
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git push -u origin main
-```
+---
 
-# how to pull
-```
-git pull origin main(or branch name)
-```
+## Architecture
 
+**Application type:** 3-tier web application
 
+### Components
 
-This applicaton has only "llb" folder provided , since flutter is too heavey so feel free to replace them after you create your own application .if any issues with the code , please feel free to contact krishnatejakarnakanti@gmail.com
+- **Frontend**
+  - Static HTML, CSS, JavaScript
+  - Served via Apache
+- **Backend**
+  - PHP (REST-style API)
+  - Plain PHP, no framework
+- **Database**
+  - MariaDB (MySQL compatible)
+- **Hosting**
+  - AWS EC2 (Ubuntu 24.04 LTS)
+  - Apache Web Server
 
+---
+
+## Deployment Environment
+
+### AWS EC2
+
+- OS: Ubuntu 24.04 LTS
+- Web Server: Apache 2.4
+- Runtime: PHP 8.x
+- Database: MariaDB
+- Access: SSH (key-based)
+
+### Directory Layout on Server
+
+```text
+/home/ubuntu/To-do-application   → Git source repository
+/var/www/html                   → Deployed runtime files
